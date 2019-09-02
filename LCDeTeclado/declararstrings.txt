@@ -1,0 +1,7 @@
+	STR1 DCB "Hello World", 0
+	LDR R1, =STR1
+loop_str
+	LDRB R0, [R1], #1
+	BL envia_char
+	CMP R0, #0
+	BNE loop_str
